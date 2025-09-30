@@ -18,7 +18,7 @@ form.addEventListener("submit", (e) => {
   }
 });
 
-successButton.addEventListener("click", (e) => {
+successButton.addEventListener("click", () => {
   formContainer.style.display = "flex";
   successContainer.style.display = "none";
   email.value = "";

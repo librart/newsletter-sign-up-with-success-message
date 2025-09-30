@@ -80,6 +80,7 @@ select {
   --grey: #949494;
   --blue-800: #242742;
   --blue-700: #36384d;
+  --error-active: rgba(255, 97, 85, 15%);
   --roboto: "Roboto", sans-serif;
 }
 
@@ -106,13 +107,16 @@ body {
   gap: 1.5rem;
 }
 
-.content h2 {
+.content h2,
+.success-message h2 {
   font: 700 2.5rem var(--roboto);
   color: var(--blue-800);
   line-height: 1;
 }
 
-.content p {
+.content p,
+.success-message p,
+.content ul li p {
   font: 400 1rem var(--roboto);
   color: var(--blue-800);
   line-height: 1.5;
@@ -126,6 +130,10 @@ body {
   margin-block: 0;
 }
 
+.content ul li {
+  list-style: none;
+}
+
 .flex-row {
   display: flex;
   align-items: flex-start;
@@ -135,13 +143,6 @@ body {
 .flex-row img {
   width: 21px;
   height: 21px;
-}
-
-.flex-row li {
-  list-style: none;
-  font: 400 1rem var(--roboto);
-  color: var(--blue-800);
-  line-height: 1.5;
 }
 
 form {
@@ -164,7 +165,6 @@ form {
 }
 
 .label-container label {
-  font: 700 0.75rem var(--roboto);
   color: var(--blue-800);
   line-height: 1.5;
 }
@@ -189,18 +189,22 @@ form {
 .error-active {
   border-color: var(--red);
   color: var(--red);
-  background-color: rgba(255, 97, 85, 15%);
+  background-color: var(--error-active);
 }
 
-form button {
+form button,
+.success-container button {
   border-width: 0;
   border-radius: 0.5rem;
-  padding: 1rem 2.5rem;
   background-color: var(--blue-800);
   font: 700 1rem var(--roboto);
   color: var(--white);
   line-height: 1.5;
   cursor: pointer;
+}
+
+form button {
+  padding: 1rem 2.5rem;
 }
 
 .success-container {
@@ -221,28 +225,8 @@ form button {
   height: 64px;
 }
 
-.success-message h2 {
-  font: 700 2.5rem var(--roboto);
-  color: var(--blue-800);
-  line-height: 1;
-}
-
-.success-message p {
-  font: 400 1rem var(--roboto);
-  color: var(--blue-800);
-  line-height: 1.5;
-}
-
 .success-container button {
-  border-width: 0;
-  border-radius: 0.5rem;
-  background-color: var(--blue-800);
   padding: 1rem 6rem;
-  font: 700 1rem var(--roboto);
-  color: var(--blue-800);
-  line-height: 1.5;
-  color: var(--white);
-  cursor: pointer;
 }
 
 @media (min-width: 48rem) {
@@ -269,7 +253,8 @@ form button {
     margin-inline: 0;
   }
 
-  .content h2 {
+  .content h2,
+  .success-message h2 {
     font: 700 3.5rem var(--roboto);
     line-height: 1;
   }
@@ -290,11 +275,6 @@ form button {
     background-color: var(--white);
     border-radius: 2.25rem;
     gap: 2rem;
-  }
-
-  .success-message h2 {
-    font: 700 3.5rem var(--roboto);
-    line-height: 1;
   }
 }
 
