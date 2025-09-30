@@ -1,0 +1,331 @@
+/* https://piccalil.li/blog/a-modern-css-reset */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root {
+  --red: #ff6155;
+  --white: #ffffff;
+  --grey: #949494;
+  --blue-800: #242742;
+  --blue-700: #36384d;
+  --roboto: "Roboto", sans-serif;
+}
+
+body {
+  min-height: 100svh;
+  background-color: var(--white);
+}
+
+.sign-up-form,
+.content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.image-container img {
+  width: 100%;
+}
+
+.content {
+  margin-inline: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.content h2 {
+  font: 700 2.5rem var(--roboto);
+  color: var(--blue-800);
+  line-height: 1;
+}
+
+.content p {
+  font: 400 1rem var(--roboto);
+  color: var(--blue-800);
+  line-height: 1.5;
+}
+
+.content ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-inline-start: 0;
+  margin-block: 0;
+}
+
+.flex-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.flex-row img {
+  width: 21px;
+  height: 21px;
+}
+
+.flex-row li {
+  list-style: none;
+  font: 400 1rem var(--roboto);
+  color: var(--blue-800);
+  line-height: 1.5;
+}
+
+form {
+  margin-inline: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label-container {
+  display: flex;
+  justify-content: space-between;
+  font: 700 0.75rem var(--roboto);
+}
+
+.label-container label {
+  font: 700 0.75rem var(--roboto);
+  color: var(--blue-800);
+  line-height: 1.5;
+}
+
+.form-container input {
+  border-width: 0.0625rem;
+  border-radius: 0.5rem;
+  padding: 1rem 1.5rem;
+  font: 400 1rem var(--roboto);
+  line-height: 1.5;
+}
+
+.form-container input:active {
+  border-color: var(--blue-800);
+  color: var(--blue-800);
+}
+
+.error-message {
+  color: var(--red);
+}
+
+.error-active {
+  border-color: var(--red);
+  color: var(--red);
+  background-color: rgba(255, 97, 85, 15%);
+}
+
+form button {
+  border-width: 0;
+  border-radius: 0.5rem;
+  padding: 1rem 2.5rem;
+  background-color: var(--blue-800);
+  font: 700 1rem var(--roboto);
+  color: var(--white);
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.success-container {
+  padding: 9.3125rem 1.5rem 4.375rem 1.5rem;
+  display: none;
+  flex-direction: column;
+  gap: 16.4375rem;
+}
+
+.success-message {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.success-message img {
+  width: 64px;
+  height: 64px;
+}
+
+.success-message h2 {
+  font: 700 2.5rem var(--roboto);
+  color: var(--blue-800);
+  line-height: 1;
+}
+
+.success-message p {
+  font: 400 1rem var(--roboto);
+  color: var(--blue-800);
+  line-height: 1.5;
+}
+
+.success-container button {
+  border-width: 0;
+  border-radius: 0.5rem;
+  background-color: var(--blue-800);
+  padding: 1rem 6rem;
+  font: 700 1rem var(--roboto);
+  color: var(--blue-800);
+  line-height: 1.5;
+  color: var(--white);
+  cursor: pointer;
+}
+
+@media (min-width: 48rem) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--blue-700);
+  }
+
+  .sign-up-form {
+    width: 38rem;
+    height: 54.875rem;
+    background-color: var(--white);
+    border-radius: 2.25rem;
+    padding: 2.5rem;
+  }
+
+  .content-container {
+    gap: 1.5rem;
+  }
+
+  .content {
+    margin-inline: 0;
+  }
+
+  .content h2 {
+    font: 700 3.5rem var(--roboto);
+    line-height: 1;
+  }
+
+  .flex-row {
+    align-items: center;
+  }
+
+  form {
+    margin-inline: 0;
+    gap: 1rem;
+  }
+
+  .success-container {
+    width: 31.5rem;
+    height: 32.5rem;
+    padding: 4rem;
+    background-color: var(--white);
+    border-radius: 2.25rem;
+    gap: 2rem;
+  }
+
+  .success-message h2 {
+    font: 700 3.5rem var(--roboto);
+    line-height: 1;
+  }
+}
+
+@media (min-width: 90rem) {
+  .sign-up-form {
+    width: 56.5rem;
+    height: 40.0625rem;
+    flex-direction: row-reverse;
+    padding: 1.5rem 2rem;
+    gap: 4rem;
+  }
+
+  .image-container img {
+    height: 100%;
+  }
+
+  .content-container {
+    width: 23.5rem;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .content {
+    gap: 2rem;
+  }
+
+  form {
+    gap: 1.5rem;
+  }
+
+  button:active {
+    background: linear-gradient(to right, #ff6a3a, #ff527b);
+  }
+}
