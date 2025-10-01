@@ -18,59 +18,61 @@
   </head>
   <body>
     <main>
-      <article class="sign-up-form">
-        <picture class="image-container">
-          <source media="(min-width: 90rem)" srcset="./assets/images/illustration-sign-up-desktop.svg" />
-          <source media="(min-width: 48rem)" srcset="./assets/images/illustration-sign-up-tablet.svg" />
-          <img src="./assets/images/illustration-sign-up-mobile.svg" alt="SVG of Illustration Sign Up" />
-        </picture>
-        <section class="content-container">
-          <div class="content">
-            <h2>Stay updated!</h2>
-            <p>Join 60,000+ product managers receiving monthly updates on:</p>
-            <ul>
-              <li>
-                <div class="flex-row">
-                  <img src="./assets/images/icon-list.svg" alt="SVG of Icon List" />
-                  <p>Product discovery and building what matters</p>
-                </div>
-              </li>
-              <li>
-                <div class="flex-row">
-                  <img src="./assets/images/icon-list.svg" alt="SVG of Icon List" />
-                  <p>Measuring to ensure updates are a success</p>
-                </div>
-              </li>
-              <li>
-                <div class="flex-row">
-                  <img src="./assets/images/icon-list.svg" alt="SVG of Icon List" />
-                  <p>And much more!</p>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <form novalidate>
-            <div class="form-container">
-              <div class="label-container">
-                <label for="email">Email address</label>
-                <span class="error-message"></span>
-              </div>
-              <input type="email" name="email" id="email" placeholder="email@company.com" required />
+      <article class="sign-up-interaction">
+        <section class="sign-up-form">
+          <picture class="image-container">
+            <source media="(min-width: 90rem)" srcset="./assets/images/illustration-sign-up-desktop.svg" />
+            <source media="(min-width: 48rem)" srcset="./assets/images/illustration-sign-up-tablet.svg" />
+            <img src="./assets/images/illustration-sign-up-mobile.svg" alt="SVG of Illustration Sign Up" />
+          </picture>
+          <div class="content-container">
+            <div class="content">
+              <h2>Stay updated!</h2>
+              <p>Join 60,000+ product managers receiving monthly updates on:</p>
+              <ul>
+                <li>
+                  <div class="flex-row">
+                    <img src="./assets/images/icon-list.svg" alt="SVG of Icon List" />
+                    <p>Product discovery and building what matters</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="flex-row">
+                    <img src="./assets/images/icon-list.svg" alt="SVG of Icon List" />
+                    <p>Measuring to ensure updates are a success</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="flex-row">
+                    <img src="./assets/images/icon-list.svg" alt="SVG of Icon List" />
+                    <p>And much more!</p>
+                  </div>
+                </li>
+              </ul>
             </div>
-            <button type="submit">Subscribe to monthly newsletter</button>
-          </form>
+            <form novalidate>
+              <div class="form-container">
+                <div class="label-container">
+                  <label for="email">Email address</label>
+                  <span class="error-message"></span>
+                </div>
+                <input type="email" name="email" id="email" placeholder="email@company.com" required />
+              </div>
+              <button type="submit">Subscribe to monthly newsletter</button>
+            </form>
+          </div>
         </section>
-      </article>
 
-      <article class="success-container">
-        <section class="success-message">
-          <img src="./assets/images/icon-success.svg" alt="SVG of Icon Success" />
-          <h2>Thanks for subscribing!</h2>
-          <p>
-            A confirmation email has been sent to <strong><span class="email-value"></span></strong>. Please open it and click the button inside to confirm your subscription.
-          </p>
+        <section class="success-container">
+          <div class="success-message">
+            <img src="./assets/images/icon-success.svg" alt="SVG of Icon Success" />
+            <h2>Thanks for subscribing!</h2>
+            <p>
+              A confirmation email has been sent to <strong><span class="email-value"></span></strong>. Please open it and click the button inside to confirm your subscription.
+            </p>
+          </div>
+          <button type="button">Dismiss message</button>
         </section>
-        <button type="button">Dismiss message</button>
       </article>
     </main>
   </body>

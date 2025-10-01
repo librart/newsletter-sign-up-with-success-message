@@ -22,6 +22,8 @@ successButton.addEventListener("click", () => {
   formContainer.style.display = "flex";
   successContainer.style.display = "none";
   email.value = "";
+  errorMessage.textContent = "";
+  email.className = "";
 });
 
 function showError() {
